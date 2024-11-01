@@ -1,0 +1,175 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #000;
+    color: #fff;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.light-theme {
+    background-color: #fff;
+    color: #000;
+}
+
+header {
+    background-color: #333;
+    padding: 20px;
+    text-align: center;
+}
+
+.menu-button {
+    position: absolute; /* Permite mover o botão livremente */
+    left: 20px; /* Distância do lado esquerdo */
+    top: 20px; /* Distância do topo */
+    cursor: pointer; /* Mostra o cursor de clique */
+    z-index: 100; /* Garante que o botão fique sobre outros elementos */
+}
+
+
+.menu-button div {
+    width: 30px;
+    height: 3px;
+    background-color: white;
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+
+.menu-button.cross div:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.menu-button.cross div:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-button.cross div:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+.theme-toggle {
+    position: absolute; /* Permite mover o botão livremente */
+    right: 20px; /* Distância do lado direito */
+    top: 20px; /* Distância do topo */
+    cursor: pointer; /* Mostra o cursor de clique */
+    z-index: 100; /* Garante que o botão fique sobre outros elementos */
+}
+
+nav {
+    display: none;
+    background-color: #444;
+    position: absolute;
+    width: 100%;
+    top: 60px;
+    left: 0;
+}
+
+nav.open {
+    display: block;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    text-align: center;
+    padding: 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+.carousel {
+    position: relative;
+    width: 60%;
+    margin: 20px auto;
+    overflow: hidden;
+}
+
+.slides {
+    display: flex;
+}
+
+.slide {
+    display: none; /* Inicialmente ocultar todos os slides */
+    width: 60%; /* Ajustar a largura para 100% do carrossel */
+    max-width: 80%; /* Limitar a largura máxima */
+    margin: 0 auto; /* Centralizar as imagens */
+}
+
+button {
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+.tema-box {
+    background-color: #444;
+    color: #fff;
+    padding: 20px;
+    margin: 20px auto;
+    border-radius: 10px;
+    max-width: 800px; /* Aumentar a largura das caixas */
+    width: 90%; /* Largura máxima das caixas */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    text-align: justify; /* Justificar o texto */
+}
+
+#back-to-top {
+    position: fixed; /* Fixa o botão na tela */
+    bottom: 20px; /* Distância do fundo da tela */
+    right: 20px; /* Distância da direita da tela */
+    background-color: #444; /* Cor de fundo do botão */
+    color: white; /* Cor do texto */
+    border: none; /* Remove a borda */
+    border-radius: 5px; /* Bordas arredondadas */
+    width: 50px; /* Largura do botão */
+    height: 50px; /* Altura do botão */
+    font-size: 20px; /* Tamanho da fonte */
+    display: flex; /* Centraliza o conteúdo */
+    align-items: center; /* Alinha verticalmente */
+    justify-content: center; /* Alinha horizontalmente */
+    cursor: pointer; /* Mostra o cursor de clique */
+    transition: background-color 0.3s; /* Transição de cor */
+}
+
+#back-to-top:hover {
+    background-color: #666; /* Cor de fundo ao passar o mouse */
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+}
+
+/* Estilos para o tema claro */
+.light-theme .tema-box {
+    background-color: #e0e0e0;
+    color: #000;
+}
+
+.light-theme nav {
+    background-color: #ccc;
+}
+
+.light-theme nav ul li a {
+    color: #000;
+}
